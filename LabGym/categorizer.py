@@ -208,7 +208,7 @@ class DatasetFromPath_AAonly(Sequence):
 
 		for path_to_pattern_image in batch:
 
-			animation=deque([np.zeros((self.dim_tconv,self.dim_tconv,self.channel),dtype='uint8')],maxlen=self.length)*self.length
+			animation=deque([np.zeros((self.dim,self.dim,self.channel),dtype='uint8')],maxlen=self.length)*self.length
 			capture=cv2.VideoCapture(path_to_pattern_image.split('.jpg')[0]+'.avi')
 			while True:
 				retval,frame=capture.read()
@@ -216,7 +216,7 @@ class DatasetFromPath_AAonly(Sequence):
 					break
 				if self.channel==1:
 					frame=cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
-				frame=cv2.resize(frame,(self.dim_tconv,self.dim_tconv),interpolation=cv2.INTER_AREA)
+				frame=cv2.resize(frame,(self.dim,self.dim),interpolation=cv2.INTER_AREA)
 				animation.append(img_to_array(frame))
 			animations.append(np.array(animation))
 
