@@ -1698,8 +1698,8 @@ class Categorizers():
 
 		inputs=Input(shape=(dim,dim,channel))
 
-		print('Training Categorizer with both Animation Analyzer and Pattern Recognizer using the behavior examples in: '+str(data_path))
-		self.log.append('Training Categorizer with both Animation Analyzer and Pattern Recognizer using the behavior examples in: '+str(data_path))
+		print('Training the Categorizer w/ only Pattern Recognizer using the behavior examples in: '+str(data_path))
+		self.log.append('Training the Categorizer w/ only Pattern Recognizer using the behavior examples in: '+str(data_path))
 		print(datetime.datetime.now())
 		self.log.append(str(datetime.datetime.now()))
 
@@ -1816,8 +1816,8 @@ class Categorizers():
 
 		inputs=Input(shape=(time_step,dim,dim,channel))
 
-		print('Training Categorizer with both Animation Analyzer and Pattern Recognizer using the behavior examples in: '+str(data_path))
-		self.log.append('Training Categorizer with both Animation Analyzer and Pattern Recognizer using the behavior examples in: '+str(data_path))
+		print('Training the Categorizer w/ only Animation Analyzer using the behavior examples in: '+str(data_path))
+		self.log.append('Training the Categorizer w/ only Animation Analyzer using the behavior examples in: '+str(data_path))
 		print(datetime.datetime.now())
 		self.log.append(str(datetime.datetime.now()))
 
