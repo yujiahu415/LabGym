@@ -2052,7 +2052,7 @@ class Categorizers():
 			if 'color_code' in list(parameters.keys()):
 				color_code=int(parameters['color_code'][0])
 				if color_code==0:
-					print('The Categorizer recognizes RGB scale main character and RGB scale  supporting characters.')
+					print('The Categorizer recognizes RGB scale main character and RGB scale supporting characters.')
 				else:
 					print('The Categorizer recognizes RGB scale main character and grayscale supporting characters.')
 			else:
